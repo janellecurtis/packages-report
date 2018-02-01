@@ -21,7 +21,8 @@ instPacksSmall <- instPacks %>%
 ## that came from me (Jenny)
 ## it an example of what yours should look like
 
-write.csv(instPacksSmall, file = here("data", "installed-packages.csv"), quote = FALSE, row.names = FALSE)
+write.csv(instPacksSmall, file = here("data", "installed-packages.csv"),
+          quote = FALSE, row.names = FALSE)
 
 ## when this script works, stage & commit it and the csv file
 ## PUSH!
