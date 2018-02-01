@@ -2,12 +2,17 @@
 
 ## read that csv into a data frame, then ...
 
+freqTable <- as.data.frame(read.csv(file = here("data", "add-on-packages-freqtable.csv")))
+
 ## if you use ggplot2, code like this will work:
-ggplot(apt_freqtable, aes(x = Built, y = n)) +
+
+ggplot(freqTable, aes(x = Built, y = n)) +
   geom_bar(stat = "identity")
 
 ## write this barchart to figs/built-barchart.png
 ## if you use ggplot2, ggsave() will help
+
+ggsave(file = here("figs", "built-barchart.png"))
 
 ## YES overwrite the file that is there now
 ## that came from me (Jenny)
